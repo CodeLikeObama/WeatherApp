@@ -1,0 +1,92 @@
+.card {
+    margin: 100px auto 0;
+    background-color: #303446;
+    width: 40%;
+    height: 700px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.topSection{
+    display: flex;
+}
+
+.CityName {
+    margin-top: 28px;
+    margin-left: 35px;
+    font-size: x-large;
+    font-family: monospace, "Victor Mono";
+}
+
+.searchButton {
+    margin-left: 30px;
+    margin-top: 60px;
+    width: 24px;
+    height: 24px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/1024px-Magnifying_glass_icon.svg.png') no-repeat center center;
+    background-size: 100%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.WeatherIconsContainer {
+    margin-top: 60px;
+}
+
+.weatherIcon {
+    width: 190px;
+    height: 190px;
+}
+
+
+.conditionsTxt {
+    font-family: monospace, "Victor Mono";
+    color: orange;
+    margin-top: 30px;
+    font-size: 30px;
+}
+.tempTxt {
+    font-family: monospace, "Victor Mono";
+    color: orange;
+    font-size: 40px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+    margin-top: 60px;
+}
+
+.col {
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+.col img{
+    width: 60px;
+}
+
+.windTxt {
+    margin-left: 10px;
+    font-family: monospace, "Victor Mono";
+    color: white;
+    height: 50%;
+    font-size: 20px;
+}
+
+.humidityTxt {
+    margin-left: 10px;
+    font-family: monospace, "Victor Mono";
+    color: white;
+    height: 50%;
+    font-size: 20px;
+}
+
+
+
+
+

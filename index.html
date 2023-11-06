@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>weatherApp</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-$END$
+<div class="card">
+    <div class="topSection">
+        <div class="CityName">
+            <p class = "CityName" id="CityNameText">CityNamePlaceHolder</p>
+        </div>
+        <div class="navBar" >
+            <button class="searchButton" type="submit"></button>
+        </div>
+    </div>
+    <div class="WeatherIconsContainer">
+        <img src="./weatherIcons/clear.png" class="weatherIcon">
+    </div>
+    <div class="ConditionsTextContainer">
+        <h1 class="tempTxt">22°C</h1>
+        <h2 class="conditionsTxt">ConditionsText</h2>
+    </div>
+    <div class = "details">
+        <div class="col">
+            <img src="./weatherIcons/wind.png" class="windIcon">
+            <p class="windTxt">20km/h</p>
+        </div>
+        <div class="col">
+            <img src="weatherIcons/humidity.png" class="humidityIcon">
+            <p class="humidityTxt">70%gt</p>
+        </div>
+    </div>
+</div>
+
+
+<script  src="./function.js"></script>
 </body>
 </html>

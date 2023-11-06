@@ -1,6 +1,7 @@
 .card {
     margin: 100px auto 0;
     background-color: #303446;
+    min-width: 500px;
     width: 40%;
     height: 700px;
     text-align: center;
@@ -8,12 +9,12 @@
 }
 
 .topSection{
-    display: flex;
+   display: flex;
+    justify-content: center;
 }
 
 .CityName {
     margin-top: 28px;
-    margin-left: 35px;
     font-size: x-large;
     font-family: monospace, "Victor Mono";
 }

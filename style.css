@@ -14,7 +14,7 @@
 }
 
 .CityName {
-    display: block;
+    display: none;
     margin-top: 28px;
     font-size: x-large;
     font-family: monospace, "Victor Mono";
@@ -22,7 +22,7 @@
 }
 
 .searchBar {
-    display: none;
+    display: block;
     margin-top: 48px;
     font-family: monospace, "Victor Mono";
     width: 95%;

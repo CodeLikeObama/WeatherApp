@@ -28,9 +28,9 @@ function search(){
 }
 
 
-//searchbutton.onclick = searchButtonFunction;
 
 
+//API Call
 searchbutton.addEventListener("click",function () {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchbar.value}&appid=41b4147b4b75fbaba5e0e514756b1051&units=metric`)
         .then(response => response.json())
@@ -59,6 +59,7 @@ searchbutton.addEventListener("click",function () {
 })
 searchbutton.addEventListener("click", cyclesearchButton)
 
+//function to cycle through states of searchbar
 function cyclesearchButton() {
     if (isSearchBarVisable === false) {
         searchbar.style.display = "block";
@@ -72,7 +73,7 @@ function cyclesearchButton() {
     }
 }
 
-
+//function to change the weatherIcon according to the conditions supplied by the API
 function changeweatherIcon (conditionName) {
 switch (conditionName) {
     case 'Thunderstorm': conditionsIcon.src = "./weatherIcons/rain.png";;

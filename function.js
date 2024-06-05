@@ -30,8 +30,8 @@ function search(){
 
 
 
-//API Call
-searchbutton.addEventListener("click",function () {
+//API Call with .then, dont want to delete, cause original version
+/*searchbutton.addEventListener("click",function () {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchbar.value}&appid=41b4147b4b75fbaba5e0e514756b1051&units=metric`)
         .then(response => response.json())
         .then(data => {
@@ -56,8 +56,38 @@ searchbutton.addEventListener("click",function () {
 
         .catch(err => console.log(err))
 
-})
+}) */
+
+//async API call better
+async function fetchWeatherData() {
+    try {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchbar.value}&appid=41b4147b4b75fbaba5e0e514756b1051&units=metric`);
+        const data = await response.json();
+        console.log(data);
+
+        let name = data.name;
+        let temperature = Math.round(data.main.temp) + "°C";
+        let humidity = data.main.humidity + "%";
+        let windspd = data.wind.speed.toFixed(1) + "km/h";
+        let conditions = data.weather[0].description;
+        let conditionsIconName = data.weather[0].main;
+
+        windspeed.innerHTML = windspd;
+        temp.innerHTML = temperature;
+        conditionstxt.innerHTML = conditions.charAt(0).toUpperCase() + conditions.slice(1);
+        humiditytxt.innerHTML = humidity;
+        cityName.innerHTML = name;
+
+        changeweatherIcon(conditionsIconName);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+//Adding EventListeners
+searchbutton.addEventListener("click", fetchWeatherData)
 searchbutton.addEventListener("click", cyclesearchButton)
+
 
 //function to cycle through states of searchbar
 function cyclesearchButton() {
